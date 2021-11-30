@@ -37,6 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  static const environment = String.fromEnvironment('ENVIRONMENT', defaultValue: 'TEST');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+            ),
+            const Text(
+              'Environment: $environment',
             ),
             Text(
               '$_counter',
